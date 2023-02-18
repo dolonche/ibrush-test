@@ -1,0 +1,63 @@
+.quote {
+  display: flex;
+  flex-direction: column;
+  font-family: "OpenSans";
+  margin-bottom: 45px;
+
+  &__text {
+    margin: 0;
+    padding: 0;
+    padding-left: 58px;
+    font-size: 18px;
+    line-height: 24px;
+    color: #1A1A1A;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 34px;
+      height: 34px;
+      border-radius: 100%;
+      background-image: url(../img/decor/quote.png);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      left: 0;
+      top: 21px;
+    }
+
+    &-paragraph {
+      margin-top: 0;
+      padding-top: 30px;
+      margin-bottom: 26px;
+    }
+  }
+
+  &__author {
+    color: #777777;
+    padding-left: 58px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@media #{$mobile-widths} {
+  .quote {
+    margin-bottom: 56px;
+
+    &__text, &__author {
+      padding-left: 53px;
+      font-size: 14px;
+      line-height: 20px;
+    }
+    &__text{
+      &::before{
+        top: 12px;
+      }
+      &-paragraph{
+        padding-top: 20px;
+      }
+    }
+  }
+}

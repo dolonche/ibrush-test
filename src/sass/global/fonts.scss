@@ -1,0 +1,36 @@
+@font-face {
+  font-family: "Helvetica";
+  font-weight: 400;
+  src: url("../fonts/Helvetica-regular.otf") format("opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Consolas";
+  font-weight: 400;
+  src: url("../fonts/Consolas.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Consolas";
+  font-weight: 700;
+  src: url("../fonts/Consolas-Bold.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Merriweather";
+  font-weight: 400;
+  src: url("../fonts/Merriweather-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "OpenSans";
+  font-weight: 400;
+  src: url("../fonts/OpenSans-Italic.ttf") format("truetype");
+  font-style: italic;
+  font-display: swap;
+}
+

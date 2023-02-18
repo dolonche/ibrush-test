@@ -1,0 +1,236 @@
+.review-form {
+  display: flex;
+  flex-direction: column;
+  background-color: $bg-sub-color;
+  padding-block: 40px;
+  font-family: "Arial";
+  margin-bottom: 55px;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__block-title {
+    font-family: "Consolas";
+    color: #202326;
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  &__rate {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    column-gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+
+    &-radio {
+      display: none;
+
+      & + label {
+        font-size: 0;
+        display: flex;
+        cursor: pointer;
+
+        &::before {
+          content: "";
+          width: 25px;
+          height: 25px;
+          background-image: url(../img/decor/rate.svg);
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+      }
+
+      &:checked ~ label::before {
+        background-image: url(../img/decor/rate-active.svg);
+      }
+    }
+
+    & > label:hover::before,
+    & > label:hover ~ label::before {
+      background-image: url(../img/decor/rate-active.svg);
+    }
+  }
+
+  &__block-info {
+    padding-top: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 20px;
+
+    &-bunch {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      max-width: 100%;
+    }
+
+    &-input {
+      appearance: none;
+      box-shadow: none;
+      border: 1px solid #E6E6E6;
+      background-color: $bg-color;
+      font-size: 14px;
+      padding-top: 26px;
+      padding-bottom: 9px;
+      border-radius: 6px;
+      outline: none;
+      padding-left: 20px;
+
+      &:active + label,
+      &:focus + label,
+      &:valid + label {
+        transform: translateY(calc(-50% - 10px));
+      }
+    }
+
+    &-label {
+      position: absolute;
+      color: #777777;
+      font-family: inherit;
+      font-size: 14px;
+      line-height: 14px;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: 0.4s transform;
+      pointer-events: none;
+    }
+
+    &-select {
+      display: none;
+
+      & + div {
+        font-family: inherit;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        color: #777777;
+        border: none;
+        box-shadow: 0px 0px 2px 0px #7f7f7f inset;
+        border-radius: 6px;
+        font-size: 14px;
+        line-height: 14px;
+        padding-left: 0;
+        padding-right: 0;
+        font-weight: 400;
+        max-width: 100%;
+
+        &::after {
+          right: 23px;
+        }
+
+        .current {
+          padding-left: 20px;
+          padding-right: 27px;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+          display: block;
+          max-width: calc(100% - 10px);
+        }
+
+        .nice-select-dropdown {
+          width: 100%;
+          max-width: 100%;
+          margin-top: 10px;
+          padding-right: 0;
+
+          .list {
+            margin: 0;
+            background: $bg-color;
+            box-shadow: 0px 2px 15px rgba(154, 154, 154, 0.5);
+            border-radius: 0;
+            border: none;
+
+            .option {
+              line-height: 44px;
+              position: relative;
+              color: #222222;
+
+              &.selected {
+                font-weight: 400;
+                background-color: inherit;
+              }
+
+              &:hover {
+                background-color: #ededed;
+
+                &::before {
+                  content: "";
+                  position: absolute;
+                  height: 100%;
+                  width: 7px;
+                  background-color: $primary-color;
+                  left: 0;
+                  top: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &-textarea {
+      font-family: "Arial";
+      appearance: none;
+      resize: none;
+      height: 120px;
+      grid-column: 1 / 4;
+      border: 1px solid #E6E6E6;
+      outline: none;
+      padding-top: 15px;
+      padding-left: 19px;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    &-button {
+      border: none;
+      outline: none;
+      background-color: $primary-color;
+      color: $bg-color;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-transform: uppercase;
+      font-family: inherit;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 16px;
+      border-radius: 2px;
+      padding-block: 14px;
+      cursor: pointer;
+    }
+  }
+}
+
+@media #{$mobile-widths} {
+  .review-form {
+    margin-bottom: 30px;
+    &__block-title {
+      font-size: 16px;
+    }
+
+    &__block-info {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, 50px);
+      grid-row-gap: 10px;
+      padding-top: 10px;
+
+      &-textarea {
+        grid-column: 1 /2;
+      }
+    }
+
+    &__rate {
+      margin-bottom: 23px;
+    }
+  }
+}

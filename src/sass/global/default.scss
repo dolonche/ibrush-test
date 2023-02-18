@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: #{"max(800px, 100vh)"};
+}
+
+input, a, label, select, textarea {
+  font: inherit;
+  color: inherit;
+}

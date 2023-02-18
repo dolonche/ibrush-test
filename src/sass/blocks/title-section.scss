@@ -1,0 +1,21 @@
+.title-section {
+  font-family: "Consolas";
+  margin: 0;
+  color: #000000;
+}
+h3.title-section{
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: normal;
+}
+
+@media #{$mobile-widths} {
+  h3.title-section{
+    font-size: 23px;
+    line-height: 36px;
+    font-weight: bold;
+    &--mob-s{
+      font-size: 21px;
+    }
+  }
+}

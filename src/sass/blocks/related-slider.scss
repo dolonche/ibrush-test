@@ -1,0 +1,53 @@
+.tns-outer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  margin-bottom: 75px;
+
+  .tns-nav {
+    order: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+    margin-top: 20px;
+
+    button {
+      border: none;
+      width: 10px;
+      height: 10px;
+      border-radius: 100%;
+
+      &.tns-nav-active {
+        width: 15px;
+        height: 15px;
+        background-color: $primary-color;
+      }
+    }
+  }
+}
+
+.related-slider {
+  &__item {
+    text-decoration: none;
+
+    &-img {
+      margin-bottom: 20px;
+      width: 100%;
+      height: auto;
+    }
+
+    &-title {
+      font-family: "Consolas";
+      font-size: 18px;
+      color: #272522;
+      line-height: 24px;
+    }
+  }
+}
+
+@media #{$mobile-widths} {
+  .tns-outer {
+    margin-top: 20px;
+  }
+}

@@ -1,0 +1,42 @@
+.page-title {
+  font-family: "Consolas";
+  color: $primary-color;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  font-size: 48px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 64px;
+
+  &::before, &::after {
+    content: "";
+    flex-grow: 2;
+    height: 1px;
+    background-color: $decor-color;
+  }
+
+  &::before {
+    margin-right: 28px;
+  }
+
+  &::after {
+    margin-left: 28px;
+  }
+}
+@media #{$mobile-widths} {
+  .page-title{
+    font-size: 23px;
+    line-height: 25px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    &::before {
+      margin-right: 15px;
+    }
+
+    &::after {
+      margin-left: 15px;
+    }
+  }
+}
