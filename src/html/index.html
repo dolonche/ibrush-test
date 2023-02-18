@@ -138,15 +138,18 @@
         let slider = tns({
             container: '.related-slider',
             items: 1,
-            gutter: 10,
+            gutter: 300,
             center: true,
             controls: false,
             nav: true,
+            fixedWidth: 280,
             responsive: {
                 768: {
                     gutter: 30,
                     items: 3,
                     nav: false,
+                    fixedWidth: false,
+                    center: false,
                 },
             }
         });
