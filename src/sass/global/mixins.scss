@@ -18,7 +18,7 @@
   max-width: 768px;
   margin: 0 auto;
 
-  @media #{$tablet-widths} {
+  @media #{$mobile-widths} {
     width: 100%;
   }
 }
@@ -26,7 +26,7 @@
 %grid-padding {
   padding-left: 15px;
   padding-right: 15px;
-  @media #{$tablet-widths} {
+  @media #{$mobile-widths} {
     padding-left: 20px;
     padding-right: 20px;
   }
