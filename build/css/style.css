@@ -804,6 +804,7 @@ h3.title-section {
           flex-direction: column;
   font-family: "OpenSans";
   margin-bottom: 45px;
+  font-style: italic;
 }
 
 .quote__text {
